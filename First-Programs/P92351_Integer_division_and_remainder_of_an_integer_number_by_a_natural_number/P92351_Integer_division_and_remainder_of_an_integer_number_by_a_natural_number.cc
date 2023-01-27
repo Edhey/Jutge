@@ -24,7 +24,7 @@ int main() {
     << "> 0\n";
     std::cin >> divisor;
   }
-  if (dividendo / divisor < 0 && divisor != 1) {
+  if (dividendo % divisor < 0) {
   division_entera = (dividendo / divisor) - 1;
   } else {
     division_entera = dividendo / divisor;
