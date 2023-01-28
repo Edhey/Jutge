@@ -6,14 +6,15 @@
   *
   * @file P57548_Sum_of_two_integer_numbers.cc
   * @author Himar Edhey Hernández Alonso alu0101552392@ull.edu.es
-  * @date Oct 31 2022
-  * @brief programa que lee dos números e imprime su suma 
+  * @date Jan 27 2023
+  * @brief programa que imprime  "La respuesta a la última pregunta
+  * de la vida, el universo y todo". 
   * @bug No hay errores conocidos
-  * @see https://jutge.org/problems/P57548_en
+  * @see https://jutge.org/problems/P58294_en
   */
 
 #include<iostream>
 
 int main() {
-  std::cout << "42";
+  std::cout << "42" << std::endl;
 }
