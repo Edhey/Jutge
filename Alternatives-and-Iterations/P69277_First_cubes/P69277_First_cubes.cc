@@ -25,6 +25,10 @@ void Introduccion() {
   std::cout << std::endl;
 }
 
+/** @brief Función que imprime los cubos desde 0 hasta un número pasado como 
+  * parámetro.
+  * @param numero Numero donde acaba la sucesión.
+  */
 void SucesionDePotenciasDe3(const int numero){
   for (int i{0}; i < numero; i++) {
     std::cout << i * i * i << ",";
@@ -32,8 +36,10 @@ void SucesionDePotenciasDe3(const int numero){
   std::cout << numero * numero * numero << std::endl;
 }
 
+/** @brief Función main.
+  */
 int main() {
-  Introduccion();
+  // Introduccion();
   int numero{};
   std::cin >> numero;
   SucesionDePotenciasDe3(numero);
