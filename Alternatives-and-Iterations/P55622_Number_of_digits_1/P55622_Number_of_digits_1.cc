@@ -8,7 +8,7 @@
   * @date Feb 06 2023
   * @brief Programa que lee un número e imprime su cantidad de dígitos.
   * @bug No hay errores conocidos
-  * @see 
+  * @see https://jutge.org/problems/P55622_en/
   */  
 
 #include <iostream>
