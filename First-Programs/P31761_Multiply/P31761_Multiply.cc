@@ -14,8 +14,8 @@
 #include <iostream>
 
 int main() {
-unsigned long long numero1{}, numero2{};
-std::cin >> numero1 >> numero2;
-unsigned long long producto{numero1 * numero2};
-std::cout << producto << std::endl; 
+  unsigned long long numero1{}, numero2{};
+  std::cin >> numero1 >> numero2;
+  unsigned long long producto{numero1 * numero2};
+  std::cout << producto << std::endl; 
 }
