@@ -29,7 +29,7 @@ void Introduccion() {
   * @param palabra1 string con una de las palabras a evaluar.
   * @param palabra2 string con la otra palabras a evaluar.
   */
-void OrdenLexicografico(std::string palabra1, std::string palabra2) {
+void OrdenLexicografico(std::string& palabra1, std::string& palabra2) {
   if (palabra1 == palabra2) {
     std::cout << palabra1 << " = " << palabra2 << std::endl;
     return;
@@ -38,15 +38,20 @@ void OrdenLexicografico(std::string palabra1, std::string palabra2) {
       if (palabra1[i] > palabra2[i]) {
         std::cout << palabra1 << " > " << palabra2 << std::endl;
         return;
-      } else if (palabra1[i] < palabra2[i]){
+      } else if (palabra1[i] < palabra2[i]) {
         std::cout << palabra1 << " < " << palabra2 << std::endl;
         return;
       }
     }
+    std::cout << palabra1 << " < " << palabra2 << std::endl; 
+    // Si esta línea se ejecuta significa que ninguno de los returns anteriores 
+    // ha sido llamado, con lo cual la primera palabra tiene todas sus letras 
+    // iguales a la segunda, pero es de un tamaño menor.
   }
 }
 
 int main() {
+  // Introduccion();
   std::string palabra1{}, palabra2{};
   std::cin >> palabra1 >> palabra2;
   OrdenLexicografico(palabra1, palabra2);
