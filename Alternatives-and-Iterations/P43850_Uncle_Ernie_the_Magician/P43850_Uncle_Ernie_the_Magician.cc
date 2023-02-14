@@ -6,7 +6,7 @@
   *
   * @author Himar Edhey Hernández Alonso alu0101552392@ull.edu.es
   * @date Feb 14 2023
-  * @brief Programa
+  * @brief Programa que replica el truco del mago Ernie.
   * @bug No hay errores conocidos
   * @see https://jutge.org/problems/P43850_en
   */
