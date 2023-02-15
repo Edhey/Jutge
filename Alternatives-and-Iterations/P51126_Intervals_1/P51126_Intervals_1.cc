@@ -8,7 +8,7 @@
   * @date Feb 15 2023
   * @brief Programa que, dados dos intervalos, calcule el intervalo 
   * correspondiente a su intersección, o diga que está vacío. Se aseume que
-  * a1≤ b1 and a2≤ b2.
+  * a1 <= b1 and a2 <= b2.
   * @bug No hay errores conocidos
   * @see https://jutge.org/problems/P51126_en
   */
@@ -19,8 +19,9 @@
   * @return Texto con el resumen de la utilidad del programa y como ejecutarlo
   */
 void Introduccion() {
-  std::cout << "Programa que lee un número e imprime su cantidad de dígitos."; 
-  std::cout <<  std::endl;
+  std::cout << "Programa que, dados dos intervalos, calcule el intervalo "
+  << "correspondiente a su intersección, o diga que está vacío. Se aseume que "
+  << "a1 <= b1 and a2 <= b2." <<  std::endl;
   std::cout <<  "Escribe cuatro números enteros a1, b1, a2, b2 que representen "
   << "los intervalos [a1, b1] y [a2, b2]: "; 
   std::cout << std::endl;
@@ -33,7 +34,7 @@ void Introduccion() {
   * @param intervalo2a Es el primer número del segundo intevalo.
   * @param intervalo2b Es el segundo número del segundo intevalo.
   */
-void Interseccion(int intervalo1a, int intervalo1b, int intervalo2a,
+void InterseccionDeIntervalos(int intervalo1a, int intervalo1b, int intervalo2a,
 int intervalo2b) {
   int minimo_de_la_interseccion{}, maximo_de_la_interseccion{};
   if (intervalo1b >= intervalo2a && intervalo1a <= intervalo2b) {
@@ -60,5 +61,5 @@ int main() {
   // Introduccion();
   int intervalo1a{}, intervalo1b{}, intervalo2a{}, intervalo2b{};
   std::cin >> intervalo1a >> intervalo1b >> intervalo2a >> intervalo2b;
-  Interseccion(intervalo1a, intervalo1b, intervalo2a, intervalo2b);
+  InterseccionDeIntervalos(intervalo1a, intervalo1b, intervalo2a, intervalo2b);
 }
