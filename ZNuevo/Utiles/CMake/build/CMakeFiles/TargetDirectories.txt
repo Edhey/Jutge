@@ -1,0 +1,3 @@
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/MakeFile/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/MakeFile/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/MakeFile/build/CMakeFiles/Coche.dir

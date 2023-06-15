@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/Books/src/Books.h
+iostream
+-
+
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/Books/src/Books_main.cc
+cstring
+-
+string
+-
+Books.h
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/Books/src/Books.h
+

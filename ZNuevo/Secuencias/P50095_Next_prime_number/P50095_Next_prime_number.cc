@@ -35,10 +35,14 @@ bool Primality(const int numero) {
   if (numero <= 1) {
     return false;
   }
-  for (int i = 2; i <= sqrt(numero); i++) {
+  for (int i = 2; i <= sqrt(numero);) {
     if (numero % i == 0) {
       return false;
     }
+    if (i == 2)
+      ++i;
+    else
+      i = i + 2;
   }
   return true;
 }

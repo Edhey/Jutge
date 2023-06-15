@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/ChessPieces/src/chess_pieces.h
+iostream
+-
+vector
+-
+
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/ChessPieces/src/chess_pieces_main.cc
+string
+-
+chess_pieces.h
+/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/ChessPieces/src/chess_pieces.h
+

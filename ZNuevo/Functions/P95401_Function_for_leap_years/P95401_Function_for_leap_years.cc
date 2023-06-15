@@ -54,12 +54,17 @@ int MultipleOf100(int numero) {
   }
 }
 
+/**
+ * @brief Función que devuelve los dos primeros digitos de un número de 4
+ * cifras.
+ * @param numero
+ * @return
+ */
 int FirstDigits(int numero) {
   int const kMultiplo_100 = 100;
   int division = numero / kMultiplo_100;
   return division;
 }
-
 
 /**
  * @brief Función que comprueba si un año dado es bisiesto.

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/chess_pieces.dir/src/chess_pieces.cc.o CMakeFiles/chess_pieces.dir/src/chess_pieces_main.cc.o  -o chess_pieces 
