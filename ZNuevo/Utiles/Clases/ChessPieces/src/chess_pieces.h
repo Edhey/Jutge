@@ -33,6 +33,7 @@ public:
   ChessPieces(const Piezas& pieza, const Color& color, int fila, int columna)
       : pieza_(pieza), color_(color), fila_(fila), columna_(columna) {}
   ~ChessPieces();
+  ChessPieces(const ChessPieces&);
   friend std::ostream& operator<<(std::ostream& out, const ChessPieces& pieza);
   int getFila() const { return fila_; }
   int getColumna() const { return columna_; }
@@ -44,7 +45,7 @@ private:
   int columna_;
 };
 
-std::string PiezaACadena(const Piezas& pieza);
-std::string ColorACadena(const Color& color);
+std::string PiezaAString(const Piezas& pieza);
+std::string ColorAString(const Color& color);
 
 #endif

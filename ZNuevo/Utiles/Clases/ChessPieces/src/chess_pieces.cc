@@ -23,6 +23,17 @@
 ChessPieces::~ChessPieces() {}
 
 /**
+ * @brief Constructor de copia para la clase ChessPieces.
+ * @param copia Es el tipo ChessPieces pasado como referencia a copiar.
+ */
+ChessPieces::ChessPieces(const ChessPieces& copia) {
+  this->color_ = copia.color_;
+  this->columna_ = copia.columna_;
+  this->fila_ = copia.fila_;
+  this->pieza_ = copia.pieza_;
+}
+
+/**
  * @brief Sobrecarga del operador de inserción de flujo para imprimir un objeto
  * ChessPieces en un flujo de salida.
  * @param out Flujo de salida en el que se imprimirá el objeto ChessPieces.
@@ -31,7 +42,7 @@ ChessPieces::~ChessPieces() {}
  */
 std::ostream& operator<<(std::ostream& out, const ChessPieces& pieza) {
   out << PiezaAString(pieza.pieza_) << " de color "
-      << ColorAString(pieza.color_) << ", fila " << pieza.fila_ << " columna "
+      << ColorAString(pieza.color_) << ", fila " << pieza.fila_ << ", columna "
       << pieza.columna_;
   return out;
 }

@@ -31,6 +31,11 @@ int main(int argc, char* argv[]) {
   if (!CompruebaParametrosCorrectos(argc, argv, numero_de_parametros)) {
     return 1;
   }
+  std::cout << "Prueba del constructor de copia: " << std::endl;
+  ChessPieces pieza1(Piezas::alfil, Color::blanco, 2, 3);
+  std::cout << "Pieza original: " << pieza1 << std::endl;
+  ChessPieces pieza_copia(pieza1);
+  std::cout << "Pieza copia: " << pieza_copia << std::endl;
   std::vector<ChessPieces> vector_de_piezas;
   vector_de_piezas = InstanciaPiezas(std::stoi(argv[1]));
   ImprimeVectorPiezas(vector_de_piezas);
