@@ -1,0 +1,1375 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"iostream": {
+		"prefix": "iostream",
+		"body": [
+			"#include <iostream>",
+		]
+	},
+	"main": {
+		"prefix": "main",
+		"body": [
+			"#include <iostream>",
+			"",
+			"int main() {",
+			"  $0",
+			"  return 0;",
+			"}",
+		],
+		"description": "Main Function"
+	},
+	"cout": {
+		"prefix": "cout",
+		"body": [
+			"std::cout << $0",
+		],
+		"description": "Log output to console"
+	},
+	"cin": {
+		"prefix": "cin",
+		"body": [
+			"std::cin >> $0",
+		],
+		"description": "Log input from console"
+	},
+	"endl": {
+		"prefix": "endl",
+		"body": [
+			"<< std::endl;",
+		],
+		"description": "Log output(endl) to console"
+	},
+	"coutendl": {
+		"prefix": "coutendl",
+		"body": [
+			"std::cout << std::endl;",
+		],
+		"description": "Log output(endl) to console"
+	},
+	"templateclasst": {
+		"prefix": "templateclasst",
+		"body": [
+			"template <class T>",
+			"$0",
+		],
+		"description": "Imprime la estructura template"
+	},
+	"cabecera": {
+		"prefix": "cabecera",
+		"body": [
+			"/**",
+			" * Universidad de La Laguna",
+			" * Escuela Superior de Ingeniería y Tecnología",
+			" * Grado en Ingeniería Informática",
+			" * Informática Básica 2022-2023",
+			" *",
+			" * @author Himar Edhey Hernández Alonso alu0101552392@ull.edu.es",
+			" * @date Jun 16 2023",
+			" * @brief Programa que ",
+			" * @bug No hay errores conocidos",
+			" * @see ",
+			" */"
+		],
+		"description": "Log output to console"
+	},
+	"main_IB": {
+		"prefix": "main_IB",
+		"body": [
+			"/**",
+			" * Universidad de La Laguna",
+			" * Escuela Superior de Ingeniería y Tecnología",
+			" * Grado en Ingeniería Informática",
+			" * Informática Básica 2022-2023",
+			" *",
+			" * @author Himar Edhey Hernández Alonso alu0101552392@ull.edu.es",
+			" * @date ${1:XXX} ${2:XX} 2023",
+			" * @brief Programa que ",
+			" * @bug No hay errores conocidos",
+			" * @see $3",
+			" */",
+			" ",
+			"#include <iostream>",
+			" ",
+			"$0",
+			" ",
+			"/**",
+			" * @brief Función main",
+			" */",
+			"int main() {",
+			"  Introduccion();",
+			"  ",
+			"  return 0;",
+			"}",
+		],
+		"description": "Imprime la estructura main para IB"
+	},
+	"Introduccion": {
+		"prefix": "Introduccion",
+		"body": [
+			"/**",
+			" * @brief Función que imprime el propósito del programa",
+			" */",
+			"void Introduccion() {",
+			"  std::cout << \"$1\" << std::endl;",
+			"  std::cout << \"${0:Introduzca una:}\" << std::endl;",
+			"}",
+		],
+		"description": "Imprime la estructura de la funcion Introduccion"
+	},
+	"MCD_Euclidean_algorithm": {
+		"prefix": "MCD_Euclidean_algorithm",
+		"body": [
+			"/**",
+			" * @brief Función que calcula el máximo común divisor de dos números naturales a",
+			" * y b utilizando la versión rápida del algoritmo euclidiano.",
+			" * @param a entero del que se calcula el máximo común divisor.",
+			" * @param b entero del que se calcula el máximo común divisor.",
+			" * @return máximo común divisor de los dos números.",
+			" */",
+			"int MCD(int a, int b) {",
+			"  do {",
+			"    int aux{b};",
+			"    b = a % b;",
+			"    a = aux;",
+			"  } while (b != 0)",
+			"  return a;",
+			"}",
+		],
+		"description": "Función que calcula el máximo común divisor de dos números naturales por la versión rápida del algoritmo euclidiano"
+	},
+	"mcm_for_two_numbers": {
+		"prefix": "mcm_for_two_numbers",
+		"body": [
+			"/**",
+			" * @brief Función que devuelve el mínimo común múltiplo de dos números pasados",
+			" * como parámetros. Siguiendo la igualdad matemática:",
+			" * MCD(a, b) * mcm(a, b) = a * b.",
+			" * @param numero1 número del que se obtiene el mínimo común múltiplo.",
+			" * @param numero2 número del que se obtiene el mínimo común múltiplo.",
+			" * @return el mínimo común múltiplo de los dos números.",
+			" */",
+			" int mcm(int numero1, int numero2) {",
+			"  // mcm(a, b) = (a * b) / MCD(a, b)",
+			"  return (numero1 * numero2 / MCD(numero1, numero2));",
+			"}"
+		],
+		"description": "Función que devuelve el mínimo común múltiplo de dos números"
+	},
+	"mcm": {
+		"prefix": "mcm",
+		"body": [
+			"/**",
+			" * @brief Función que devuelve el mínimo común múltiplo de los números pasados",
+			" * como parámetros. Siguiendo la igualdad matemática:",
+			" * MCD(a, b) * mcm(a, b) = a * b.",
+			" * @param cantidad_de_numeros cantidad de números de los que se obtiene el",
+			" * mínimo común múltiplo.",
+			" * @return mínimo común múltiplo.",
+			" */",
+			" int mcm(int cantidad_de_numeros) {",
+			"  long long numero{}, mcm{};",
+			"  for (int i{0}; i < cantidad_de_numeros; ++i) {",
+			"    std::cin >> numero;",
+			"    if (i == 0) {",
+			"      mcm = numero;",
+			"    } else {",
+			"      // mcm(a, b) = (a * b) / MCD(a, b)",
+			"      mcm = mcm * numero / MCD(mcm, numero);",
+			"    }",
+			"  }",
+			"  return mcm;",
+			"}"
+		],
+		"description": "Función que devuelve el mínimo común múltiplo de los números pasados (cualquier cantidad)"
+	},
+	"EsPrimo": {
+		"prefix": "EsPrimo",
+		"body": [
+			"/**",
+			" * @brief Función que decide si un número es primo o no.",
+			" * @param numero es el número a analizar.",
+			" * @return true si es primo.",
+			" *         false si no es primo.",
+			" */",
+			"bool IsPrime(const int numero) {",
+			"  if (numero <= 1) {",
+			"    return false;",
+			"  }",
+			"  for (int i = 2; i <= sqrt(numero);) {",
+			"    if (numero % i == 0) {",
+			"      return false;",
+			"    }",
+			"    if (i == 2)",
+			"      ++i;",
+			"    else",
+			"      i = i + 2;",
+			"  }",
+			"  return true;",
+			"}"
+		],
+		"description": "Función que dice si un número es primo"
+	},
+	"true_false": {
+		"prefix": "true_false",
+		"body": [
+			"? std::cout << \"true\" : std::cout << \"false\";",
+			"std::cout << std::endl;"
+		],
+		"description": "Imprime la estructura del operdor terciario para true y false"
+	},
+	"for_me": {
+		"prefix": "for_me",
+		"body": [
+			"for (int i{0}; i < $1; ++i) {",
+			"  $0",
+			"} "
+		],
+		"description": "Imprime la estructura del for"
+	},
+	"precision": {
+		"prefix": "precision",
+		"body": [
+			"// #include <iomanip>",
+			"std::cout << std::fixed << std::setprecision($0) << "
+		],
+		"description": "#include <iomanip> Estuctura del ajuste de precision"
+	},
+	"getline": {
+		"prefix": "getline",
+		"body": [
+			"std::getline(std::cin, $0);"
+		],
+		"description": "#include <string> Estructura del getline"
+	},
+	"descarta_getline": {
+		"prefix": "descarta_getline",
+		"body": [
+			"std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');"
+		],
+		"description": "#include <limits> Descarta todos los caracteres del flujo de entrada std::cin hasta encontrar un carácter de nueva línea ('\n') o hasta alcanzar el límite máximo de caracteres que se pueden descartar."
+	},
+	"cifrado_Cesar": {
+		"prefix": "cifrado_Cesar",
+		"body": [
+			"/**",
+			" * @brief Función que devuelve el carácter correspondiente siguiendo el cifrado",
+			" * César, sumando el desplazamiento pasado como parámetro en el alfabeto al",
+			" * carácter pasado.",
+			" * @param caracter caracter a cifrar.",
+			" * @param desplazamiento Es la cantidad de letras que se mueve caracter en el",
+			" * abecedario.",
+			" * @return devuelve el carácter correspondiente a c cuando la constante es k.",
+			" */",
+			" char Encoded(char caracter, int desplazamiento) {",
+			"  int des;",
+			"  if (caracter == '_')",
+			"    return ' ';",
+			"  else if (isalpha(caracter)) {",
+			"    return ((caracter - 'a' + desplazamiento) % ('z' - 'a' + 1) + 'A');",
+			"  } else",
+			"    return caracter;",
+			"}"
+		],
+		"description": "Función que devuelve el carácter correspondiente siguiendo el cifrado César"
+	},
+	"cantidad_digitos": {
+		"prefix": "cantidad_digitos",
+		"body": [
+			"/**",
+			" * @brief Función que dado un número devuelve su cantidad de digitos.",
+			" * @param numero número del que se devuelve su cantidad de dígitos.",
+			" * @return Devuelve la cantidad de dígitos de un número dado.",
+			" */",
+			" int CantidadDeDigitos(int numero) {",
+			"  const int kNumero10{10};",
+			"  int cantidad_de_digitos{0};",
+			"  while (numero) {",
+			"    ++cantidad_de_digitos;",
+			"    numero /= kNumero10;",
+			"  }",
+			"  return cantidad_de_digitos;",
+			"}"
+		],
+		"description": "Función que dado un número devuelve su cantidad de digitos"
+	},
+	"integer_a_romano": {
+		"prefix": "integer_a_romano",
+		"body": [
+			"/**",
+			" * @brief Función que dado un número imprime su número romano equivalente.",
+			" * @param numero número a imprimir en romano.",
+			" */",
+			" void RomanNumber(int numero) {",
+			"  std::cout << numero << \" = \";",
+			"  std::vector<int> division{1000, 500, 100, 50, 10, 5, 1};",
+			"  std::vector<char> romanos{'M', 'D', 'C', 'L', 'X', 'V', 'I'};",
+			"  int iterador{0};",
+			"  while (numero != 0) {",
+			"    if (iterador % 2 == 0) {",
+			"      if (numero / division[iterador] == 0 &&",
+			"          numero / (division[iterador] - division[iterador + 2]) != 0) {",
+			"        std::cout << romanos[iterador + 2] << romanos[iterador];",
+			"        numero -= (division[iterador] - division[iterador + 2]);",
+			"      }",
+			"    } else if (iterador % 2 != 0) {",
+			"      if (numero / division[iterador] == 0 &&",
+			"          numero / (division[iterador] - division[iterador + 1]) != 0) {",
+			"        std::cout << romanos[iterador + 1] << romanos[iterador];",
+			"        numero -= (division[iterador] - division[iterador + 1]);",
+			"      }",
+			"    }",
+			"    if (numero / division[iterador] != 0) {",
+			"      std::cout << romanos[iterador];",
+			"      numero -= division[iterador];",
+			"    } else {",
+			"      ++iterador;",
+			"    }",
+			"  }",
+			"  std::cout << std::endl;",
+			"}"
+		],
+		"description": "Función que dado un número imprime su número romano equivalente"
+	},
+	"romano_a_integer": {
+		"prefix": "romano_a_integer",
+		"body": [
+			"/**",
+			" * @brief Función que, pasado un número romano imprime su valor.",
+			" * @param numero_romano es el número romano a imprimir como entero.",
+			" */",
+			" void RomanToInteger(std::string numero_romano) {",
+			"  std::vector<char> romanos{'M', 'D', 'C', 'L', 'X', 'V', 'I'};",
+			"  std::vector<int> valor_entero{1000, 500, 100, 50, 10, 5, 1};",
+			"  int valor{0}, iterador{0};",
+			"  while (numero_romano[iterador] != '.') {",
+			"    int valor_siguiente{}, valor_actual{};",
+			"    for (int i{0}; i < romanos.size(); ++i) {",
+			"      if (romanos[i] == numero_romano[iterador + 1]) {",
+			"        valor_siguiente = valor_entero[i];",
+			"      }",
+			"      if (romanos[i] == numero_romano[iterador]) {",
+			"        valor_actual = valor_entero[i];",
+			"      }",
+			"    }",
+			"    if (valor_actual < valor_siguiente) {",
+			"      valor += valor_siguiente - valor_actual;",
+			"      ++iterador;",
+			"    } else {",
+			"      valor += valor_actual;",
+			"    }",
+			"    ++iterador;",
+			"  }",
+			"  std::cout << numero_romano.erase(numero_romano.size() - 1) << \" = \" << valor",
+			"            << std::endl;",
+			"}"
+		],
+		"description": "Función que, dado un número romano imprime su valor entero"
+	},
+	"invertir_conjunto_palabras_recursividad": {
+		"prefix": "invertir_conjunto_palabras_recursividad",
+		"body": [
+			"/**",
+			" * @brief Función que lee palabras y las imprime en orden inverso, invirtiendo",
+			" * también el orden de los caracteres de cada palabra.",
+			" * @param numero_de_palabras es la cantidad de palabras a leer.",
+			" */",
+			"void ReverseStringInverse(int numero_de_palabras) {",
+			"  std::string palabra;",
+			"  std::cin >> palabra;",
+			"  if (numero_de_palabras == 0) {",
+			"    for (int i = palabra.size() - 1; i >= 0; --i) {",
+			"      std::cout << palabra[i];",
+			"    }",
+			"  } else {",
+			"    ReverseStringInverse(--numero_de_palabras);",
+			"    for (int i = palabra.size() - 1; i >= 0; --i) {",
+			"      std::cout << palabra[i];",
+			"    }",
+			"    std::cout << std::endl;",
+			"  }",
+			"}"
+		],
+		"description": "Función que lee palabras y las imprime en orden inverso"
+	},
+	"imprimir_integer_invertido_recursivo": {
+		"prefix": "imprimir_integer_invertido_recursivo",
+		"body": [
+			"/**",
+			" * @brief Función que invierte el número que se le pasa.",
+			" * @param numero número a invertir.",
+			" */",
+			"void PrintReverseNumber(int numero) {",
+			"  int const kNumero10{10};",
+			"  if (numero / kNumero10 == 0) {",
+			"    std::cout << numero << std::endl;",
+			"  } else {",
+			"    std::cout << numero % kNumero10;",
+			"    PrintReverseNumber(numero /= kNumero10);",
+			"  }",
+			"}"
+		],
+		"description": "Función que imprime el número que se le pasa inviertido"
+	},
+	"invertir_integer": {
+		"prefix": "invertir_integer",
+		"body": [
+			"/**",
+			" * @brief Función que invierte el número que se le pasa.",
+			" * @param numero número a invertir.",
+			" * @return Devuelve el número inverso.",
+			" */",
+			" int ReverseNumber(int numero) {",
+			"  int const kNumero10{10};",
+			"  int inverso{};",
+			"  while (numero / kNumero10 != 0) {",
+			"    inverso *= kNumero10;",
+			"    inverso += (numero % kNumero10) * kNumero10;",
+			"    numero /= kNumero10;",
+			"  }",
+			"  return inverso + numero;",
+			"}"
+		],
+		"description": "Función que devuelve el número que se le pasa inviertido"
+	},
+	"sumatorio_ecuacion_de_recurrencia": {
+		"prefix": "sumatorio_ecuacion_de_recurrencia",
+		"body": [
+			"/**",
+			" * @brief Función que devuelve el sumatorio de 1 a n para el n pasado como",
+			" * parámetro haciendo uso de la ecuación de recurrencia de Gauss.",
+			" * @param numero número del que se obtiene el sumatorio.",
+			" * @return sumatorio de 1 a n para el n pasado como parámetro.",
+			" */",
+			" int Sumatorio(int numero) { return ((numero * (numero + 1)) / 2); }"
+		],
+		"description": "Función que devuelve el sumatorio de 1 a n"
+	},
+	"fibonacci": {
+		"prefix": "fibonacci",
+		"body": [
+			"/**",
+			" * @brief Función que imprime la suceción de fibonacci para los n términos",
+			" * dados",
+			" * @param cantiad_de_terminos Es la cantidad de términos de la suceción;",
+			" */",
+			"void SucecionDeFibonacci(int cantiad_de_terminos) {",
+			"  int anterior{0}, siguiente{1}, suma{};",
+			"  std::cout << anterior << $0;",
+			"  for (int i{1}; i < cantiad_de_terminos; ++i) {",
+			"    std::cout << siguiente << $0;",
+			"    suma = anterior + siguiente;",
+			"    anterior = siguiente;",
+			"    siguiente = suma;",
+			"  }",
+			"  std::cout << std::endl;",
+			"}"
+		],
+		"description": "Función que imprime la suceción de fibonacci para los n términos dados"
+	},
+	"Collatz_hasta_1": {
+		"prefix": "Collatz_hasta_1",
+		"body": [
+			"/**",
+			" * @brief Función que imprime la cantidad de pasos que se necesitan para llegar",
+			" * a 1 para un número dado, al aplicarle la sucesion de Collazt.",
+			" * @param numero es el número de donde se parte la secuencia de Collatz.",
+			" * @return Devuelve los pasos realizados para llegar a 1.",
+			" */",
+			" int CollatzHasta1(int numero) {",
+			"  int contador{0};",
+			"  while (numero != 1) {",
+			"    if (numero % 2 == 0)",
+			"      numero /= 2;",
+			"    else",
+			"      numero = (numero * 3) + 1;",
+			"    ++contador;",
+			"  }",
+			"  return contador;",
+			"}"
+		],
+		"description": "Función que imprime la cantidad de pasos que se necesitan para llegar a 1 para un número dado, al aplicarle la sucesion de Collazt"
+	},
+	"compresion_comando": {
+		"prefix": "compresion_comando",
+		"body": [
+			"tar -czvf HimarEdheyHernándezAlonso-$0.tar.gz ",
+		],
+		"description": "Comando para comprimir un archivo en .tar.gz"
+	},
+	"CheckCorrectParameters": {
+		"prefix": "CheckCorrectParameters",
+		"body": [
+			"#include <cstring>",
+			"",
+			"/**",
+			" * @brief that Checks if the number of parameters introduced is correct.",
+			" * @param[in] argc Number of command line parameters.",
+			" * @param[in] argv Vector containing (char*) the parameters.",
+			" * @param[in] kCorrectNumber Number of parameters that should be.",
+			" * @return true if number of parameters is correct",
+			" *         false if it is not correct.",
+			" */",
+			"bool CheckCorrectParameters(const int argc, char *argv[], const int kCorrectNumber) {",
+			"  if (argc == 2 && !strcmp(argv[1], \"--help\")) {",
+			"    Introduccion();",
+			"    return false;",
+			"  } else if (argc != kCorrectNumber + 1) {",
+			"    std::cout << \"Error. Number of parameters introduced is not correct\" << std::endl;",
+			"    std::cout << \"This program must be called \" << argv[0] << \" Parameter1 \"",
+			"    << \"Parameter2 \" << \"Parameter3 \" << std::endl;",
+			"    std::cout << \"Parameter1: \" << \"$1\" << std::endl;",
+			"    std::cout << \"Parameter2: \" << \"$2\" << std::endl;",
+			"    std::cout << \"Parameter3: \" << \"$0\" << std::endl;",
+			"    return false;",
+			"  }",
+			"  return true;",
+			"}"
+		],
+		"description": "Funcíon que comprueba si los parámetros pasados por la línea de comandos son correctos Inglés"
+	},
+	"CompruebaParametrosCorrectos": {
+		"prefix": "CompruebaParametrosCorrectos",
+		"body": [
+			"#include <cstring>",
+			"",
+			"/**",
+			" * @brief Función que comprueba si el número de parámetros introducido es",
+			" * correcto.",
+			" * @param[in] argc: Número de parámetros en la línea de comando.",
+			" * @param[in] argv: Vector contenedor (char*) de parámetros.",
+			" * @param[in] kCorrectNumber: Número de parámetros que debería haber.",
+			" * @return verdadero si el número de parámetros es correcto.",
+			" *         falso si no lo es.",
+			" */",
+			"bool CompruebaParametrosCorrectos(const int argc, char *argv[], const int kCorrectNumber) {",
+			"  if (argc == 2 && (!strcmp(argv[1], \"--help\"))) {",
+			"    Introduccion();",
+			"    return false;",
+			"  } else if (argc != kCorrectNumber + 1) {",
+			"    std::cerr << \"Error. Número de parámetros incorrecto\" << std::endl;",
+			"    std::cerr << \"Este programa ha de ser llamado \" << argv[0] << \" Parámetro1 \"",
+			"    << \"Parámetro2 \" << \"Parámetro3 \" << std::endl;",
+			"    std::cerr << \"Parámetro1: \" << \"$1\" << std::endl;",
+			"    std::cerr << \"Parámetro2: \" << \"$2\" << std::endl;",
+			"    std::cerr << \"Parámetro3: \" << \"$0\" << std::endl;",
+			"    std::cerr << \"Pruebe \" << argv[0] << \" --help para más información\"",
+			"    << std::endl;",
+			"    return false;",
+			"  }",
+			"  return true;",
+			"}"
+		],
+		"description": "Funcíon que comprueba si los parámetros pasados por la línea de comandos son correctos Español"
+	},
+	"main_args_Eng": {
+		"prefix": "main_args_Eng",
+		"body": [
+			"#include <iostream>",
+			"#include <cstring>",
+			"",
+			"/**",
+			" * @brief Main function.",
+			" * @param argc number of arguments passed by comamnd line.",
+			" * @param argv pointer to an array of strings containing the arguments passed ",
+			" * to the program from the command line.",
+			" */",
+			"int main(int argc, char *argv[]) {",
+			"  int number_of_parameters{$0};",
+			"  if (!CheckCorrectParameters(argc, argv, number_of_parameters))",
+			"    return 1;",
+			"  double doble_precision = std::stod(argv[1]);",
+			"  int numero_entero = std::stoi(argv[2]);",
+			"}"
+		],
+		"description": "Función main para la lectura de argumentos desde la línea de comandos Inglés"
+	},
+	"main_args_Esp": {
+		"prefix": "main_args_Esp",
+		"body": [
+			"#include <iostream>",
+			"#include <cstring>",
+			"",
+			"/**",
+			" * @brief Función main.",
+			" * @param argc número de argumentos pasados al programa desde la línea de",
+			" * comandos.",
+			" * @param argv puntero a un array de cadenas de caracteres que contiene los",
+			" * argumentos pasados al programa desde la línea de comandos.",
+			" */",
+			"int main(int argc, char *argv[]) {",
+			"  int numero_de_parametros{$0};",
+			"  if (!CompruebaParametrosCorrectos(argc, argv, numero_de_parametros)) {",
+			"    return 1;",
+			"  }",
+			"  double doble_precision = std::stod(argv[1]);",
+			"  int numero_entero = std::stoi(argv[2]);",
+			"}"
+		],
+		"description": "Función main para la lectura de argumentos desde la línea de comandos Español"
+	},
+	"leer_fichero": {
+		"prefix": "leer_fichero",
+		"body": [
+			"std::string nombre_fichero{}, palabra{};",
+			"std::cin >> nombre_fichero;",
+			"std::ifstream texto_de_entrada{nombre_fichero};",
+			"if (!texto_de_entrada) {",
+			"  std::cerr << \"Oh no, ocurrió un error en \" << nombre_fichero ",
+			"  << \" ¡No se pudo abrir el archivo!\" << std::endl;",
+			"  return;",
+			"}",
+			"while (texto_de_entrada >> palabra) {",
+			"  texto_de_entrada >> palabra;",
+			"}"
+		],
+		"description": "include <fstream> Lee un texto desde un fichero externo"
+	},
+	"escribir_fichero": {
+		"prefix": "escribir_fichero",
+		"body": [
+			"std::ofstream fichero_de_salida{\"output.txt\"};",
+			"std::string texto{\"Viva la Virgen del Carmen.\"};",
+			"if (!fichero_de_salida) {",
+			"  std::cerr",
+			"  << \"Oh no, ocurrió un error en output.txt ¡No se pudo abrir el archivo!\"",
+			"  << std::endl;",
+			"  return;",
+			"}",
+			"fichero_de_salida << texto << endl;"
+		],
+		"description": "#include <fstream> Escribe un texto a un fichero externo"
+	},
+	"leer_y_escribir_fichero": {
+		"prefix": "leer_y_escribir_fichero",
+		"body": [
+			"std::string nombre_fichero{}, linea{};",
+			"std::cin >> nombre_fichero;",
+			"std::ifstream texto_de_entrada{nombre_fichero};",
+			"if (!texto_de_entrada) {",
+			"  std::cerr << \"Oh no, ocurrió un error en \" << nombre_fichero ",
+			"  << \" ¡No se pudo abrir el archivo!\" << std::endl;",
+			"  return 0;",
+			"}",
+			"std::ofstream fichero_de_salida{\"output.txt\"};",
+			"if (!fichero_de_salida) {",
+			"  std::cerr",
+			"  << \"Oh no, ocurrió un error en output.txt ¡No se pudo abrir el archivo!\"",
+			"  << std::endl;",
+			"  return;",
+			"}",
+			"while (std::getline(texto_de_entrada, linea)) {",
+			"  fichero_de_salida << linea << endl;",
+			"}"
+		],
+		"description": "#include <fstream>, #include <string>"
+	},
+	"añadir_a_fichero_append": {
+		"prefix": "añadir_a_fichero_append",
+		"body": [
+			"std::ofstream fichero_de_salida(nombre_fichero, std::ios::app);",
+			"if (!fichero_de_salida) {",
+			"  std::cerr",
+			"  << \"Oh no, ocurrió un error en output.txt ¡No se pudo abrir el archivo!\"",
+			"  << std::endl;",
+			"  return;",
+			"}",
+			"fichero_de_salida << valor << endl;"
+		],
+		"description": "#include <fstream>: añade un valor a un fichero sin borrar lo que contiene anteriormente."
+	},
+	"borrar_ocurrencias_de_un_fichero": {
+		"prefix": "borrar_ocurrencias_de_un_fichero",
+		"body": [
+			"/**",
+			" * @brief Función que dado un fichero y una string borra todas las ocurrencias",
+			" * de dicha string del fichero.",
+			" * @param nombre_fichero Fichero a analizar.",
+			" * @param ocurrencia_a_borrar Es el string que se quiere borrar.",
+			" */",
+			"void BorrarOcurreciaDeFichero(std::string nombre_fichero,",
+			"                              std::string ocurrencia_a_borrar) {",
+			"  std::string linea{};",
+			"  std::ifstream texto_de_entrada{nombre_fichero};",
+			"  if (!texto_de_entrada) {",
+			"    std::cerr << \"Oh no, ocurrió un error en \" << nombre_fichero",
+			"              << \" ¡No se pudo abrir el archivo!\" << std::endl;",
+			"    return;",
+			"  }",
+			"  std::ofstream fichero_de_salida{\"output.txt\"};",
+			"  if (!fichero_de_salida) {",
+			"    std::cerr",
+			"        << \"Oh no, ocurrió un error en output.txt ¡No se pudo abrir el archivo!\"",
+			"        << std::endl;",
+			"    return;",
+			"  }",
+			"  while (std::getline(texto_de_entrada, linea)) {",
+			"    int posicion = linea.find(ocurrencia_a_borrar);",
+			"    while (posicion != std::string::npos) {",
+			"      linea.erase(posicion, ocurrencia_a_borrar.length());",
+			"      posicion = linea.find(ocurrencia_a_borrar);",
+			"    }",
+			"    fichero_de_salida << linea << std::endl;",
+			"  }",
+			"  fichero_de_salida.close();",
+			"  const char *c_nombre_fichero = nombre_fichero.c_str();",
+			"  std::rename(\"output.txt\", c_nombre_fichero);",
+			"}"
+		],
+		"description": "#include <fstream>: borra todas las ocurrencias de una palabra en un fichero y lo exporta al mismo."
+	},
+	"borra_lineas_en_blanco_fichero": {
+		"prefix": "borra_lineas_en_blanco_fichero",
+		"body": [
+			"/**",
+			" * @brief Función que dado un fichero borra todas sus líneas en blanco.",
+			" * @param nombre_fichero Fichero a analizar.",
+			" */",
+			" void BorrarLineasEnBlancoDeFichero(std::string nombre_fichero) {",
+			"  std::string linea{};",
+			"  std::ifstream texto_de_entrada{nombre_fichero};",
+			"  if (!texto_de_entrada) {",
+			"    std::cerr << \"Oh no, ocurrió un error en \" << nombre_fichero",
+			"              << \" ¡No se pudo abrir el archivo!\" << std::endl;",
+			"    return;",
+			"  }",
+			"  std::ofstream fichero_de_salida{\"output.txt\"};",
+			"  if (!fichero_de_salida) {",
+			"    std::cerr",
+			"        << \"Oh no, ocurrió un error en output.txt ¡No se pudo abrir el archivo!\"",
+			"        << std::endl;",
+			"    return;",
+			"  }",
+			"  while (std::getline(texto_de_entrada, linea)) {",
+			"    for (auto &elemento : linea) {",
+			"      if (!isspace(elemento)) {",
+			"        fichero_de_salida << linea;",
+			"        if (!texto_de_entrada.eof())",
+			"          std::cout << std::endl;",
+			"        break;",
+			"      }",
+			"    }",
+			"  }",
+			"  fichero_de_salida.close();",
+			"  const char *c_nombre_fichero = nombre_fichero.c_str();",
+			"  std::rename(\"output.txt\", c_nombre_fichero);",
+			"}"
+		],
+		"description": "#include <fstream>: Borra los espacios en blanco de un fichero"
+	},
+	"mayuscula_a_minuscula": {
+		"prefix": "mayuscula_a_minuscula",
+		"body": [
+			"if (linea.front() >= 'A' && linea.front() <= 'Z') {",
+			"  char letra{static_cast<char>(linea.front() - 'A' - 'a')};",
+			"  std::cout << letra << std::endl;",
+			"}"
+		],
+		"description": "Convierte de mayúscula a minúscula"
+	},
+	"subcadena_en_cadena": {
+		"prefix": "subcadena_en_cadena",
+		"body": [
+			"/**",
+			" * @brief Función que comprueba si una subcadena dada se encuentra dentro de una",
+			" * cadena pasada por parámetros.",
+			" * @param cadena Es el string en el que se busca.",
+			" * @param subcadena Es el string a buscar.",
+			" * @return true si la subcadena está en la cadena.",
+			" *         false si la subcadena no está en la cadena.",
+			" */",
+			"bool BuscaSubcadenaEnCadena(std::string cadena, std::string subcadena) {",
+			"  for (int i{0}; i < cadena.size(); ++i) {",
+			"    if (cadena[i] == subcadena[0]) {",
+			"      bool encontrado{true};",
+			"      for (int j{1}; j < subcadena.size(); ++j) {",
+			"        if (cadena[i + j] != subcadena[j] || i + j >= cadena.size()) {",
+			"          encontrado = false;",
+			"          break;",
+			"        } else {",
+			"          encontrado = true;",
+			"        }",
+			"      }",
+			"      if (encontrado)",
+			"        return true;",
+			"    }",
+			"  }",
+			"  return false;",
+			"}"
+		],
+		"description": "Busca una subcadena dentro de una cadena Ej: Busca pos dentro de position"
+	},
+	"error_aproximado": {
+		"prefix": "error_aproximado",
+		"body": [
+			"fabs(viejo - nuevo) > epsilon;"
+		],
+		"description": "Estructura del error aproximado"
+	},
+	"borrar_string": {
+		"prefix": "borrar_string",
+		"body": [
+			"string texto, palabra_a_borrar;",
+			"int posicion = texto.find(palabra_a_borrar);",
+			"texto.erase(posicion, palabra_a_borrar.length());"
+		],
+		"description": "Elimina una vez la palabra de una string"
+	},
+	"borrar_todas_las_string": {
+		"prefix": "borrar_todas_las_string",
+		"body": [
+			"std::string texto = \"Este es un ejemplo un poco largo\";",
+			"std::string palabra_a_borrar = \"un\";",
+			"int pos = texto.find(palabra_a_borrar);",
+			"while (pos != std::string::npos) {",
+			"  texto.erase(pos, palabra_a_borrar.length());",
+			"  pos = texto.find(palabra_a_borrar);",
+			"}"
+		],
+		"description": "Elimina todas las ocurrencias de una string. std::string::npos es una constante estática miembro de la clase string que representa el mayor valor posible para un elemento de tipo size_t."
+	},
+	"convertir_string_a_const_char*": {
+		"prefix": "convertir_string_a_const_char*",
+		"body": [
+			"const char* c_nombre_fichero = nombre_fichero.c_str();"
+		],
+		"description": "Convierte de string a const char*."
+	},
+	"fichero.h": {
+		"prefix": "fichero.h",
+		"body": [
+			"/**",
+			" * Universidad de La Laguna",
+			" * Escuela Superior de Ingeniería y Tecnología",
+			" * Grado en Ingeniería Informática",
+			" * Informática Básica 2022-2023",
+			" *",
+			" * @author Himar Edhey Hernández Alonso alu0101552392@ull.edu.es",
+			" * @date Jun 16 2023",
+			" * @brief Declaración de los métodos de la clase $0",
+			" * @bug No hay errores conocidos",
+			" * @see $1",
+			" */",
+			"",
+			"#ifndef $2_H",
+			"#define $2_H",
+			"",
+			"#include <iostream>",
+			"$0",
+			"",
+			"#endif"
+		],
+		"description": "Estructura del fichero .h de una clase"
+	},
+	"fichero.cc": {
+		"prefix": "fichero.cc",
+		"body": [
+			"/**",
+			" * Universidad de La Laguna",
+			" * Escuela Superior de Ingeniería y Tecnología",
+			" * Grado en Ingeniería Informática",
+			" * Informática Básica 2022-2023",
+			" *",
+			" * @author Himar Edhey Hernández Alonso alu0101552392@ull.edu.es",
+			" * @date Jun 16 2023",
+			" * @brief Definición de los métodos de la clase $0",
+			" * @bug No hay errores conocidos",
+			" * @see $1",
+			" */",
+			"",
+			"#include \"$0.h\""
+		],
+		"description": "Estructura del fichero .cc de una clase"
+	},
+	"fichero_main.cc": {
+		"prefix": "fichero_main.cc",
+		"body": [
+			"/**",
+			" * Universidad de La Laguna",
+			" * Escuela Superior de Ingeniería y Tecnología",
+			" * Grado en Ingeniería Informática",
+			" * Informática Básica 2022-2023",
+			" *",
+			" * @date Jun 16, 2023",
+			" * @author Himar Edhey Hernández Alonso alu0101552392@ull.edu.es",
+			" * @brief Archivo main que ejecuta los métodos de la clase $0",
+			" * @see $1",
+			" */",
+			"",
+			"#include \"$0.h\"",
+			"",
+			"/**",
+			" * @brief Función main",
+			" */",
+			"int main(int argc, char *argv[]) {",
+			"  int numero_de_parametros{};",
+			"  if (!CompruebaParametrosCorrectos(argc, argv, numero_de_parametros)) {",
+			"    return 1;",
+			"  }",
+			"",
+			"}"
+		],
+		"description": "Estructura del fichero _main.cc de una clase"
+	},
+	"factorial_recursivo": {
+		"prefix": "factorial_recursivo",
+		"body": [
+			"/**",
+			" * @brief Función que devuelve el factorial de un número natural.",
+			" * @param numero número natural del que devolver su factorial.",
+			" * @return Devuelve el factorial del número pasado.",
+			" */",
+			" int Factorial(int numero) {",
+			"  if (numero == 0)",
+			"    return 1;",
+			"  return numero * Factorial(numero - 1);",
+			"}"
+		],
+		"description": "Factorial Recursivo de un número natural"
+	},
+	"año_bisiesto": {
+		"prefix": "año_bisiesto",
+		"body": [
+			"/**",
+			" * @brief Función que comprueba si un año dado es bisiesto.",
+			" * @param year año a comprobar.",
+			" * @return true: si es bisiesto.",
+			" *         false: en caso contratio.",
+			" */",
+			" bool IsLeapYear(int year) {",
+			"  const int kNumero4{4}, kNumero100{100};",
+			"  if ((year % kNumero4 == 0) && (year % kNumero100 != 0)) {",
+			"    return true;",
+			"  } else if (year % kNumero4 == 0 && year % kNumero100 == 0 &&",
+			"             (year / kNumero100) % kNumero4 == 0) {",
+			"    return true;",
+			"  } else {",
+			"    return false;",
+			"  }",
+			"}"
+		],
+		"description": "Función que detecta si un número es bisiesto"
+	},
+	"tabla": {
+		"prefix": "tabla",
+		"body": [
+			"/**",
+			" * @brief Función que imprime una tabla.",
+			" * @param filas número de filas de la tabla.",
+			" * @param columnas número de columnas de la tabla.",
+			" */",
+			"void Tabla(const int filas, const int columnas) {",
+			"  for (int i = 0; i < filas; ++i) {",
+			"    for (int j = 0; j < columnas; ++j) {",
+			"      if (i == 0)",
+			"        std::cout << \"Elemento \" << j + 1 << ' ';",
+			"      else",
+			"        // A la derecha:",
+			"        // std::cout << std::setw(10) << (i * 1000) * (j / 3) + (j / 7) + (i * 3)",
+			"        // << ' ';",
+			"        // Centrado:",
+			"        std::cout << std::right << std::setw(5)",
+			"                  << (i * 1000) * (j / 3) + (j / 7) + (i * 3) << std::left",
+			"                  << std::setw(5) << ' ' << ' ';",
+			"    }",
+			"    std::cout << std::endl;",
+			"  }",
+			"}"
+		],
+		"description": "Imprime la estructura de una tabla"
+	},
+	"decimal_a_binario": {
+		"prefix": "decimal_a_binario",
+		"body": [
+			"/**",
+			" * @brief Función que pasa de decimal a binario.",
+			" * @param entero número entero.",
+			" * @return Devuelve su equivalente binario como un vector de enteros.",
+			" */",
+			"std::vector<int> EnteroABinario(int entero) {",
+			"  int const kNumero2{2}, kNumero10{10};",
+			"  int iteraciones{0}, contador_de_ceros{0};",
+			"  std::vector<int> binario{};",
+			"  while (entero) {",
+			"    if (entero % kNumero2 == 0) {",
+			"      binario.insert(binario.begin(), 0);",
+			"    } else {",
+			"      binario.insert(binario.begin(), 1);",
+			"    }",
+			"    entero /= kNumero2;",
+			"  }",
+			"  return binario;",
+			"}"
+		],
+		"description": "#include <cmath> Función que pasa de decimal a binario como vector"
+	},
+	"binario_a_decimal": {
+		"prefix": "binario_a_decimal",
+		"body": [
+			"/**",
+			" * @brief Función que pasa de binario a decimal.",
+			" * @param binario número en binario.",
+			" * @return Devuelve su equivalente decimal.",
+			" */",
+			" int BinarioADecimal(int binario) {",
+			"  int const kNumero10{10};",
+			"  int decimal{}, iteraciones{0};",
+			"  while (binario) {",
+			"    if (binario % kNumero10 == 1)",
+			"      decimal += pow(2, iteraciones);",
+			"    binario /= kNumero10;",
+			"    ++iteraciones;",
+			"  }",
+			"  return decimal;",
+			"}"
+		],
+		"description": "#include <cmath> Función que pasa de binario a decimal"
+	},
+	"vector_a_numero": {
+		"prefix": "vector_a_numero",
+		"body": [
+			"/**",
+			" * @brief Función que pasa un vector de enteros a un número leyendo sus números",
+			" * de izquierda a derecha.",
+			" * @param vector Es el vector de enteros de donde se leen los números.",
+			" * @return devuelve el número que forma el vector al leer sus elementos de",
+			" * izquierda a derecha.",
+			" */",
+			" long long VectorAEntero(std::vector<int> vector) {",
+			"  long long numero{};",
+			"  int const kNumero10{10};",
+			"  for (auto &elemento : vector) {",
+			"    if (elemento == 0) {",
+			"      numero *= kNumero10;",
+			"    } else {",
+			"      numero *= pow(kNumero10, CantidadDeDigitos(elemento));",
+			"      numero += elemento;",
+			"    }",
+			"  }",
+			"  return numero;",
+			"}"
+		],
+		"description": "#include <cmath> Función que transforma un vector de enteros en un número leyendo sus elementos de izquierda a derecha"
+	},
+	"vector_por_delante": {
+		"prefix": "vector_por_delante",
+		"body": [
+			"${1:vector}.insert(${1:vector}.begin()${0: + i}, ${2:0});"
+		],
+		"description": "#include <vector> Estructura para pasar un vector por delante."
+	},
+	"evalua_polinomio": {
+		"prefix": "evalua_polinomio",
+		"body": [
+			"/**",
+			" * @brief Función que lee un numero 'x' y un polinomio p() creando p(x).",
+			" * @param variable es el número 'x' donde se evalua el polinomio.",
+			" * @return Devuelve el polinomio evaluado en 'x'.",
+			" */",
+			" double EvaluaPolinomio(double variable) {",
+			"  double polinomio{0}, resultado{0}, exponente{0};",
+			"  while (std::cin >> polinomio) {",
+			"    resultado += polinomio * pow(variable, exponente);",
+			"    exponente++;",
+			"  }",
+			"  return resultado;",
+			"}"
+		],
+		"description": "#include <cmath> Función que devuelve el resultado de evaluar un polinomio en 'x'"
+	},
+	"divide_string_en_palabras": {
+		"prefix": "divide_string_en_palabras",
+		"body": [
+			"std::string texto = \"Este es un ejemplo\";",
+			"std::istringstream iss(texto);",
+			"std::string palabra;",
+			"",
+			"while (iss >> palabra) {",
+			"  std::cout << palabra << std::endl;",
+			"}"
+		],
+		"description": "#include <sstream> Estructura para separar una string en palabras"
+	},
+	"analiza_fichero": {
+		"prefix": "analiza_fichero",
+		"body": [
+			"/**",
+			" * @brief Función que cuenta las lineas, las palabras y los caracteres del",
+			" * fichero que se le pasa como parámetro.",
+			" * @param nombre_fichero Es el nombre del fichero a leer.",
+			" */",
+			" void CuentaLineasPalabrasYCaracteres(std::string nombre_fichero) {",
+			"  std::string linea{}, palabra{};",
+			"  int contador_palabras{}, contador_lineas{}, contador_caracteres{};",
+			"  std::ifstream texto_de_entrada{nombre_fichero};",
+			"  if (!texto_de_entrada) {",
+			"    std::cerr << \"Oh no, ocurrió un error en \" << nombre_fichero",
+			"              << \" ¡No se pudo abrir el archivo!\" << std::endl;",
+			"    return;",
+			"  }",
+			"  while (std::getline(texto_de_entrada, linea)) {",
+			"    bool espacios{true};",
+			"    // Función lambda para std::all_of",
+			"    // if (!linea.empty() && !std::all_of(linea.begin(), linea.end(),",
+			"    // [](unsigned char c){ return std::isspace(c); })) {",
+			"    if (!linea.empty()) {",
+			"      ++contador_lineas;",
+			"    }",
+			"    for (auto &caracter : linea) {",
+			"      if (!isspace(caracter))",
+			"        espacios = false;",
+			"      ++contador_caracteres;",
+			"    }",
+			"    if (espacios == true)",
+			"      --contador_lineas;",
+			"    std::istringstream iss(linea);",
+			"    while (iss >> palabra) {",
+			"      ++contador_palabras;",
+			"    }",
+			"  }",
+			"  std::cout << \"Lineas: \" << contador_lineas << std::endl;",
+			"  std::cout << \"Palabras: \" << contador_palabras << std::endl;",
+			"  std::cout << \"Caracteres: \" << contador_caracteres << std::endl;",
+			"}"
+		],
+		"description": "#include <string> // #include <algorithm> Función que cuenta las líneas, palabras y caracteres de un fichero"
+	},
+	"for_range": {
+		"prefix": "for_range",
+		"body": [
+			"for (auto& ${1:elemento} : ${2:vector}) {",
+			"  $0",
+			"}"
+		],
+		"description": "Estructura del forrange"
+	},
+	"forr_me": {
+		"prefix": "forr_me",
+		"body": [
+			"for (int i{${1:length} - 1}; i >= 0; --i) {",
+			"  $0",
+			"}"
+		],
+		"description": "Estructura del forrange"
+	},
+	"class_me": {
+		"prefix": "class_me",
+		"body": [
+			"class ${1:Complex_number} {",
+			" public:",
+			"  ${1:Complex_number}();",
+			"  ~${1:Complex_number}();",
+			" private:",
+			"  $0",
+			"};",
+			"",
+			"${1:Complex_number}::${1:Complex_number}() {}",
+			"",
+			"${1:Complex_number}::~${1:Complex_number}() {}",
+			""
+		],
+		"description": "Estructura del forrange"
+	},
+	"palabras_mas_frecuentes_fichero": {
+		"prefix": "palabras_mas_frecuentes_fichero",
+		"body": [
+			"/**",
+			" * @brief Función que dado el nombre de un fichero y el número de palabras más",
+			" * freceuentes a buscar, busca dentro del fichero las n palabras más",
+			" * freceuentes.",
+			" * @param nombre_fichero Es el nombre del fichero a analizar.",
+			" * @param numero_de_palabras Es la cantidad de palabras más frecuentes a buscar.",
+			" */",
+			" void PalabrasMasFrecuentes(std::string nombre_fichero, int numero_de_palabras) {",
+			"  std::string palabra{};",
+			"  std::vector<std::pair<std::string, int>> frecuencia{};",
+			"  std::ifstream texto_de_entrada{nombre_fichero};",
+			"  if (!texto_de_entrada) {",
+			"    std::cerr << \"Oh no, ocurrió un error en \" << nombre_fichero",
+			"              << \" ¡No se pudo abrir el archivo!\" << std::endl;",
+			"    return;",
+			"  }",
+			"  while (texto_de_entrada >> palabra) {",
+			"    texto_de_entrada >> palabra;",
+			"    bool encontrado{false};",
+			"    for (int i{0}; i < frecuencia.size(); ++i) {",
+			"      if (frecuencia[i].first == palabra) {",
+			"        ++frecuencia[i].second;",
+			"        encontrado = true;",
+			"        break;",
+			"      }",
+			"    }",
+			"    if (!encontrado)",
+			"      frecuencia.emplace_back(palabra, 1);",
+			"  }",
+			"  for (int i{0}; i < numero_de_palabras; ++i) {",
+			"    std::pair<std::string, int> mayor_frecuencia{\"\", 0};",
+			"    for (auto &elemento : frecuencia) {",
+			"      if (elemento.second > mayor_frecuencia.second) {",
+			"        mayor_frecuencia.first = elemento.first;",
+			"        mayor_frecuencia.second = elemento.second;",
+			"      }",
+			"    }",
+			"    std::cout << \"La palabra \" << mayor_frecuencia.first << \" aparece \"",
+			"              << mayor_frecuencia.second << \" veces.\" << std::endl;",
+			"    for (auto it = frecuencia.begin(); it != frecuencia.end(); ++it) {",
+			"      if (it->first == mayor_frecuencia.first) {",
+			"        frecuencia.erase(it);",
+			"        break;",
+			"      }",
+			"    }",
+			"  }",
+			"}"
+		],
+		"description": "Función que imprime las palabras más frecuentes de un fichero"
+	},
+	"Comandos_GitHub": {
+		"prefix": "Comandos_GitHub",
+		"body": [
+			"git init",
+			"git add .",
+			"git status",
+			"git commit -m \"Commit message\"",
+			"git push origin master",
+			"git pull",
+			"git remote -v",
+			"git clone",
+			"git diff"
+		],
+		"description": "Comandos GitHub esenciales"
+	},
+	"random": {
+		"prefix": "random",
+		"body": [
+			"v1 = rand() % 100;         // v1 esta en el rango 0 to 99",
+			"v2 = rand() % 100 + 1;     // v2 esta en el rango 1 to 100",
+			"v3 = rand() % 30 + 1985;   // v3 esta en el rango 1985-2014"
+		],
+		"description": "Utiles para numeros aleatorios"
+	},
+	"random_integer_vector": {
+		"prefix": "random_integer_vector",
+		"body": [
+			"/**",
+			" * @brief Función que genera un vector con n números aleatorios.",
+			" * @param cantidad_de_numeros es la cantidad de números aleatorios del vector.",
+			" * @return Devuelve un vector con n números aleatorios.",
+			" */",
+			" std::vector<int> VectorEnteroAleatorio(int cantidad_de_numeros) {",
+			"  std::vector<int> vector_aleatorio(cantidad_de_numeros);",
+			"  // Semilla generadora",
+			"  std::srand(std::time(nullptr));",
+			"  for (auto& elemento : vector_aleatorio) {",
+			"    elemento = rand() % 300 + 1985;  // El número está en el rango 1985-2284",
+			"  }",
+			"  return vector_aleatorio;",
+			"}"
+		],
+		"description": "#include <ctime> Función que genera un vector con n números aleatorios"
+	},
+	"random_mt19937()": {
+		"prefix": "random_mt19937()",
+		"body": [
+			"std::mt19937 generador(std::time(nullptr)); // Semilla para generar números aleatorios",
+			"std::uniform_int_distribution<int> distribucion_int(0, 99); // Distribución uniforme entre 0 y 99",
+			"int numero_aleatorio_int = distribucion_int(generador); // Genera un número aleatorio entre 0 y 99",
+			"std::uniform_real_distribution<double> distribucion_double(0.0, 99.0); // Distribución uniforme entre 0.0 y 99.0",
+			"double numero_aleatorio_double = distribucion_double(generador); // Genera un número aleatorio entre 0.0 y 99.0"
+		],
+		"description": "Función que genera números aleatorios con mt19937(), posible double..."
+	},
+	"sobrecarga<<": {
+		"prefix": "sobrecarga<<",
+		"body": [
+			"/**",
+			" * @brief Sobrecarga del operador de inserción de flujo para imprimir un objeto",
+			" * ${1:Books} en un flujo de salida.",
+			" * @param out Flujo de salida en el que se imprimirá el objeto ${1:Books}.",
+			" * @param ${2:libro} Objeto ${1:Books} que se imprimirá en el flujo de salida.",
+			" * @return Referencia al flujo de salida.",
+			" */",
+			"std::ostream& operator<<(std::ostream& out, const ${1:Books}& ${2:libro}) {",
+			"  out << ${2:libro} << \", \" << ${2:libro} << \", \" << ${2:libro};",
+			"  return out;",
+			"}"
+		],
+		"description": "Estructura para la sobrecarga del operador << de inserción"
+	},
+	"sobrecarga>>": {
+		"prefix": "sobrecarga>>",
+		"body": [
+			"/**",
+			" * @brief Sobrecarga del operador de extracción de flujo para leer un objeto",
+			" * ${1:ComplexNumber} desde un flujo de entrada.",
+			" * @param in Flujo de entrada desde el que se leerá el objeto ${1:ComplexNumber}.",
+			" * @param ${2:complejo} Objeto ${1:ComplexNumber} en el que se almacenarán los valores",
+			" * leídos desde el flujo de entrada.",
+			" * @return Referencia al flujo de entrada.",
+			" */",
+			" std::istream& operator>>(std::istream& in, ${1:ComplexNumber}& ${2:complejo}) {",
+			"  in >> ${2:complejo} >> ${2:complejo} >> ${2:complejo};",
+			"  return in;",
+			"}"
+		],
+		"description": "Estructura para la sobrecarga del operador >> de extracción"
+	},
+	"sobrecarga+": {
+		"prefix": "sobrecarga+",
+		"body": [
+			"/**",
+			" * @brief Sobrecarga del operador de suma para sumar dos números ${0:complejos}.",
+			" * @param ${0:complejo} Número ${0:complejo} que se sumará del objeto actual.",
+			" * @return Nuevo objeto ${1:ComplexNumber} que representa el resultado de la suma.",
+			" */",
+			" ${1:ComplexNumber} ${1:ComplexNumber}::operator+(const ${1:ComplexNumber}& ${0:complejo}) const {",
+			"  return ${1:ComplexNumber}(this->real_ + complejo.real_,",
+			"                       this->imaginario_ + complejo.imaginario_);",
+			"}"
+		],
+		"description": "Ejemplo de sobrecarga operador +"
+	},
+	"constructor_predeterminado": {
+		"prefix": "constructor_predeterminado",
+		"body": [
+			"Box(int ${1:w = 1}, int ${3:l = 1}, int ${5:h = 1}) : m_width(${2:w}), m_height(${4:h}), m_length(${6:l}) {}"
+		],
+		"description": "Estructura de un constructor predeterminado"
+	},
+	"constructor_copia": {
+		"prefix": "constructor_copia",
+		"body": [
+			"/**",
+			" * @brief Constructor de copia para la clase ${1:ChessPieces}.",
+			" * @param copia Es el tipo ${1:ChessPieces} pasado como referencia a copiar.",
+			" */",
+			"${1:ChessPieces}::${1:ChessPieces}(const ${1:ChessPieces}& copia) {",
+			"  this->${2:color_} = copia.${2:color_};",
+			"  this->${2:columna_} = copia.${2:columna_};",
+			"  this->${2:fila_} = copia.${2:fila_};",
+			"  this->${2:pieza_} = copia.${2:pieza_};",
+			"}"
+		],
+		"description": "Estructura de un constructor de copia"
+	},
+	"destructor_predeterminado": {
+		"prefix": "destructor_predeterminado",
+		"body": [
+			"/**",
+			" * @brief Destructor de la clase ${1:ComplexNumber}.",
+			" */",
+			"${1:ComplexNumber}::~${1:ComplexNumber}() {}"
+		],
+		"description": "Estructura de un destructor predeterminado"
+	},
+}
