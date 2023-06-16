@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/complex_number.dir/src/complex_number.cc.o CMakeFiles/complex_number.dir/src/complex_number_main.cc.o  -o complex_number 
+/usr/bin/c++ -rdynamic CMakeFiles/complex_number.dir/src/complex_number.cc.o CMakeFiles/complex_number.dir/src/complex_number_main.cc.o -o complex_number 

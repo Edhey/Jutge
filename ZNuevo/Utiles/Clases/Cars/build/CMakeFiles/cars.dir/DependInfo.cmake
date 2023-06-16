@@ -1,17 +1,15 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/Cars/src/cars.cc" "/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/Cars/build/CMakeFiles/cars.dir/src/cars.cc.o"
-  "/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/Cars/src/cars_main.cc" "/mnt/c/Users/himar/OneDrive - Universidad de La Laguna/Escritorio/Ing-Informatica-ULL/1er Cuatri/Informatica Basica/Jutge/Utiles/Clases/Cars/build/CMakeFiles/cars.dir/src/cars_main.cc.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../src"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/usuario/Jutge/ZNuevo/Utiles/Clases/Cars/src/cars.cc" "CMakeFiles/cars.dir/src/cars.cc.o" "gcc" "CMakeFiles/cars.dir/src/cars.cc.o.d"
+  "/home/usuario/Jutge/ZNuevo/Utiles/Clases/Cars/src/cars_main.cc" "CMakeFiles/cars.dir/src/cars_main.cc.o" "gcc" "CMakeFiles/cars.dir/src/cars_main.cc.o.d"
   )
 
 # Targets to which this target links.

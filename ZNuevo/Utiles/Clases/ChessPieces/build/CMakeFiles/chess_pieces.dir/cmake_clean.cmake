@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/chess_pieces.dir/src/chess_pieces.cc.o"
+  "CMakeFiles/chess_pieces.dir/src/chess_pieces.cc.o.d"
   "CMakeFiles/chess_pieces.dir/src/chess_pieces_main.cc.o"
+  "CMakeFiles/chess_pieces.dir/src/chess_pieces_main.cc.o.d"
   "chess_pieces"
   "chess_pieces.pdb"
 )

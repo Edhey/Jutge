@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/timer.dir/src/timer.cc.o CMakeFiles/timer.dir/src/timer_main.cc.o  -o timer 
+/usr/bin/c++ -rdynamic CMakeFiles/timer.dir/src/timer.cc.o CMakeFiles/timer.dir/src/timer_main.cc.o -o timer 

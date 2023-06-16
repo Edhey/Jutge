@@ -13,9 +13,9 @@
 
 #include "chess_pieces.h"
 
-#include <random>
 #include <cstring>
 #include <ctime>
+#include <random>
 
 /**
  * @brief Destructor de la clase ChessPieces.
@@ -26,12 +26,11 @@ ChessPieces::~ChessPieces() {}
  * @brief Constructor de copia para la clase ChessPieces.
  * @param copia Es el tipo ChessPieces pasado como referencia a copiar.
  */
-ChessPieces::ChessPieces(const ChessPieces& copia) {
-  this->color_ = copia.color_;
-  this->columna_ = copia.columna_;
-  this->fila_ = copia.fila_;
-  this->pieza_ = copia.pieza_;
-}
+ChessPieces::ChessPieces(const ChessPieces& copia)
+    : pieza_(copia.pieza_),
+      color_(copia.color_),
+      fila_(copia.fila_),
+      columna_(copia.columna_) {}
 
 /**
  * @brief Sobrecarga del operador de inserción de flujo para imprimir un objeto
@@ -178,8 +177,9 @@ bool PosicionesCorrectas(const std::vector<ChessPieces>& vector_de_piezas) {
   for (size_t i{0}; i < vector_de_piezas.size(); ++i) {
     for (size_t j{0}; j < vector_de_piezas.size(); ++j) {
       if (i != j &&
-          vector_de_piezas[i].getColumna() == vector_de_piezas[j].getColumna() 
-          && vector_de_piezas[i].getFila() == vector_de_piezas[j].getFila()) {
+          vector_de_piezas[i].getColumna() ==
+              vector_de_piezas[j].getColumna() &&
+          vector_de_piezas[i].getFila() == vector_de_piezas[j].getFila()) {
         return false;
       }
     }

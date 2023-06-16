@@ -14,6 +14,7 @@
 #include "cars.h"
 
 #include <string>
+#include <limits>
 
 /**
  * @brief Destructor de la clase Cars.

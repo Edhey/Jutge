@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/complex_number.dir/src/complex_number.cc.o"
+  "CMakeFiles/complex_number.dir/src/complex_number.cc.o.d"
   "CMakeFiles/complex_number.dir/src/complex_number_main.cc.o"
+  "CMakeFiles/complex_number.dir/src/complex_number_main.cc.o.d"
   "complex_number"
   "complex_number.pdb"
 )
