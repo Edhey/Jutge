@@ -1,0 +1,5 @@
+Pasos para gdb en terminal:
+g++ -g main.cc file1.cc file2.cc -o programa
+(gdb) run args1 args2 args3
+(gdb) break miFuncion
+(gdb) break programa.cc:42
