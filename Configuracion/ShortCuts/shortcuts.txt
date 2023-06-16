@@ -1,0 +1,5 @@
+Open Keyboard Shortcuts
+
+Format Document (Format Cell?): Alt + Shift + F
+Create Declaration / Definition: Crtl + K Ctrl + Shift + D
+Generate Doxygen Comment: Ctrl + Shift + K Ctrl + Shift + D
